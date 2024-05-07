@@ -2,18 +2,26 @@
 // Pretend it's an API request
 const users = require("./data").default;
 
-// Fetches all users
-const getUsers = () => {
-  return users;
-};
+//
+function getUsers(userId) {
+  return new Promise((resolve, reject) => {
+      setTimeout(() => {
+      const user = users[userId];
+      if (user) {
+        resolve(user); 
+      } else {
+        reject(new Error("ID inválido o no existe")); 
+      }
+    }, 2000); 
+  });
+}
 
-// Filters users by specific ID
+
 const getUser = (id) => {
   return users.find((user) => user.id === id);
 };
 
-// test
-// console.log(getUser(3));
-
 module.exports = { getUsers, getUser };
+
+
 
