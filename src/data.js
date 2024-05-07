@@ -7,7 +7,7 @@ const users = [
   },
   {
     id: 2,
-    username: "piderman",
+    username: "spiderman",
     email: "parkerdapete@gmail.com",
     password: "2D$aLzX9(_2",
   },
