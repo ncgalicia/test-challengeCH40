@@ -6,9 +6,9 @@ function isValidDNA(cadena){
     if ( cadena.legth === 0 ){
         return '';
     }if (dnaRegex.test(cadena)) {
-        console.log("true");
+        return ("true");
     } else {
-        console.log("false");
+        return("false");
     }
 } 
 
@@ -16,3 +16,5 @@ isValidDNA("CTAG"); // should return true
 isValidDNA("CTXG"); // should return false due to 'X'
 isValidDNA("ctag"); // should return false due to lowercase
 isValidDNA(""); // should return false for empty string
+
+module.exports = isValidDNA;
